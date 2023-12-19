@@ -90,8 +90,8 @@ OJ 会在评测时给定不同的初始台面状态，运行你所编写的代�
 ├── README.md
 ├── assets
 └── src
-    ├── AngriChecker.c
-    ├── AngriChecker.h
+    ├── AgariChecker.c
+    ├── AgariChecker.h
     ├── Calculator.c
     ├── Calculator.h
     ├── YakuChecker.c
@@ -105,7 +105,7 @@ OJ 会在评测时给定不同的初始台面状态，运行你所编写的代�
 ## 你能做的事情
 
 - 新增 `.c`、`.h` 文件。
-- 修改或删除 `AngriChecker.c/h `、`Calculator.c/h `、`YakuChecker.c/h `、`main.c`（可以自己造用例，因为 OJ 会替换掉它）。
+- 修改或删除 `AgariChecker.c/h `、`Calculator.c/h `、`YakuChecker.c/h `、`main.c`（可以自己造用例，因为 OJ 会替换掉它）。
 - 修改 `majsa.c/h` 中除 `Result *majsa(Status*)` 定义外的内容，当然，你需要去实现这个函数，如果更改了函数定义，测试就没法定位了，后果自负。
 - 修改 `Makefile` 中除 git 目标依赖的部分，我们在 Makefile 中确保了你的每一次编译运行都能够自动进行 git commit。这些自动的 commit 可以帮助你回滚到自己想要的任意版本，并且在未来查重工作中产生疑问时，良好的 commit 记录将成为重要的证明。
 
@@ -168,7 +168,7 @@ int main(){
 - 副露区 `groupTile` 由副露类型与牌字符串组成，副露类型为枚举类型，有顺子 `Shuntsu`、刻子 `Koutsu`、杠子 `Kantsu` 与暗杠 `Ankan`（为简化数据结构，姑且将暗杠算入副露区中，但别忘了暗杠并不破坏门清）。
 - 牌山剩余牌数 `remainTileCount` 、是否已立直 `isRiichi`、是否为两立直 `isDoubleRiichi`、是否为一发 `isIppatsu` 与是否为岭上牌 `isRinshan` 是否用于判断是否有役种海底摸月 `Haiteiraoyue` 、河底捞鱼 `Houteiraoyui`、立直 `Riichi`、两立直 `doubleRiichi`、一发 `Ippatsu`、岭上开花 `Rinshankaihou`。
 - 结果状态中的结果类型为枚举类型，有荣和 `RON`、自摸 `TSUMO`、听牌 `TENPAI`、振听 `FURITEN` 与不听 `NOTEN`。
-- 样例中的手牌为 🀇🀏🀙🀡🀐🀘🀀🀁🀂🀃🀆🀅🀄，是国士无双十三面听的牌型，加上自家摸进的当前控牌 🀀 后，达成了国士无双和牌形，役种为国士无双十三面 `Kokushijuusanmenmachi`，番数为 `26`（两倍役满），不考虑符数，上家对家下家都要付给自家 `32000` 点数，结果类型为自摸 `TSUMO`。
+- 样例中的手牌为 🀇🀏🀙🀡🀐🀘🀀🀁🀂🀃🀆🀅🀄，是国士无双十三面听的牌型，加上自家摸进的当前控牌 🀀 后，达成了国士无双和牌形，役种为国士无双十三面 `Kokushijuusanmenmachi`，番数为 `26`（两倍役满，注意两倍役满得到的 26 翻与累计役满得到的 26 翻最终计算的点数并不相同），不考虑符数，上家对家下家都要付给自家 `32000` 点数，结果类型为自摸 `TSUMO`。
 - 样例中的检验答案是否正确的部分使用了 `assert()`，这并非最终 OJ 的实现方式（因为 OJ 还需要分段给分），但是在这里用会更直观，本地测试的时候也可以这样写。
 
 ## 评分标准

@@ -1,7 +1,7 @@
 #pragma once
 #include "main.h"
 #include "Calculator.h"
-#include "AngriChecker.h"
+#include "AgariChecker.h"
 #include "YakuChecker.h"
 #include <stdlib.h>
 

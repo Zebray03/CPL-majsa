@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include "main.h"
 
-bool isAngri(Status *status);  // 判断是否为和牌形，且无舍牌振听
+bool isAgari(Status *status);  // 判断是否为和牌形，且无舍牌振听
 
 bool isTenpai(Status *status);  // 判断是否为听牌形
 
