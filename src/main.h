@@ -130,7 +130,7 @@ typedef struct status Status;
 struct result {
   ResultType type;  // 结果类型
   Yaku yaku[20];    // 役种，排除古役、抢杠与流局满贯
-  int han;          // 番数
+  int han;          // 番数，约定役满役种得到的番数为负数，X倍役满即为 -X，以此与累计役满区分
   int fu;           // 符数，国士无双时符数无意义
   int point[3];     // 点数，三家各自要给自家的点数，不考虑包牌，下标为 0=上家，1=对家，2=下家
   int machi;        // 面听数

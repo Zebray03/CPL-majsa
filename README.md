@@ -61,7 +61,7 @@ typedef struct status Status;
 struct result {
   ResultType type;  // 结果类型
   Yaku yaku[20];    // 役种，排除古役、抢杠与流局满贯，请按升序排列
-  int han;          // 番数
+  int han;          // 番数，约定役满役种得到的番数为负数，X倍役满即为 -X，以此与累计役满区分
   int fu;           // 符数，国士无双时符数无意义
   int point[3];     // 点数，三家各自要给自家的点数，不考虑包牌，下标为 0=上家，1=对家，2=下家
   int machi;        // 面听数
@@ -141,7 +141,7 @@ int main(){
   for (int i = 0; i < sizeof(result->yaku) / sizeof(result->yaku[0]); i++){
     assert(result->yaku[i] == stdYaku[i]);
   }
-  assert(result->han == 26);
+  assert(result->han == -2);
   // assert(result->fu == 30);  // 国士无双，不考虑符数
   assert(result->point[KAMICHA] == 32000);
   assert(result->point[TOIMEN] == 32000);
@@ -168,7 +168,7 @@ int main(){
 - 副露区 `groupTile` 由副露类型与牌字符串组成，副露类型为枚举类型，有顺子 `Shuntsu`、刻子 `Koutsu`、杠子 `Kantsu` 与暗杠 `Ankan`（为简化数据结构，姑且将暗杠算入副露区中，但别忘了暗杠并不破坏门清）。
 - 牌山剩余牌数 `remainTileCount` 、是否已立直 `isRiichi`、是否为两立直 `isDoubleRiichi`、是否为一发 `isIppatsu` 与是否为岭上牌 `isRinshan` 是否用于判断是否有役种海底摸月 `Haiteiraoyue` 、河底捞鱼 `Houteiraoyui`、立直 `Riichi`、两立直 `doubleRiichi`、一发 `Ippatsu`、岭上开花 `Rinshankaihou`。
 - 结果状态中的结果类型为枚举类型，有荣和 `RON`、自摸 `TSUMO`、听牌 `TENPAI`、振听 `FURITEN` 与不听 `NOTEN`。
-- 样例中的手牌为 🀇🀏🀙🀡🀐🀘🀀🀁🀂🀃🀆🀅🀄，是国士无双十三面听的牌型，加上自家摸进的当前控牌 🀀 后，达成了国士无双和牌形，役种为国士无双十三面 `Kokushijuusanmenmachi`，番数为 `26`（两倍役满，注意两倍役满得到的 26 翻与累计役满得到的 26 翻最终计算的点数并不相同），不考虑符数，上家对家下家都要付给自家 `32000` 点数，结果类型为自摸 `TSUMO`。
+- 样例中的手牌为 🀇🀏🀙🀡🀐🀘🀀🀁🀂🀃🀆🀅🀄，是国士无双十三面听的牌型，加上自家摸进的当前控牌 🀀 后，达成了国士无双和牌形，役种为国士无双十三面 `Kokushijuusanmenmachi`，番数为 `-2`（约定役满役种得到的番数为负数，如四暗刻役满即为 `-1`，国士无双十三面两倍役满即为 `-2`，以此与累计役满区分），不考虑符数，上家对家下家都要付给自家 `32000` 点数，结果类型为自摸 `TSUMO`。
 - 样例中的检验答案是否正确的部分使用了 `assert()`，这并非最终 OJ 的实现方式（因为 OJ 还需要分段给分），但是在这里用会更直观，本地测试的时候也可以这样写。
 
 ## 评分标准
