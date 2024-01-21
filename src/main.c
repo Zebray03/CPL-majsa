@@ -26,7 +26,7 @@ int main() {
           .honbaCount = 1,
           .dora = "9p",
           .uradora = "5m",
-          .handTile = "4m5m6m7m7m8m8m5s6s6s7s7s8s",
+          .handTile = "4m0m6m7m7m8m8m5s6s6s7s7s8s",
           .groupTile = {},
           .discardTile = "3z5z1z2m3p2m3s7s",
           .currentPlayer = KAMICHA,
