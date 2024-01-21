@@ -55,13 +55,13 @@ Result *majsa(Status *status) {
     memcpy(result, &example1, sizeof(Result));
   }
   if (status->bakaze == NANN && status->jikaze == PEI) {
-    memcpy(result, &example1, sizeof(Result));
+    memcpy(result, &example2, sizeof(Result));
   }
   if (status->bakaze == NANN && status->jikaze == SHAA) {
-    memcpy(result, &example1, sizeof(Result));
+    memcpy(result, &example3, sizeof(Result));
   }
   if (status->bakaze == NANN && status->jikaze == TON) {
-    memcpy(result, &example1, sizeof(Result));
+    memcpy(result, &example4, sizeof(Result));
   }
   return result;
 }
