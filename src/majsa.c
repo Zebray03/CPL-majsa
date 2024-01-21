@@ -6,10 +6,10 @@ Result *majsa(Status *status) {
       .type = TSUMO,
       .yaku = {Kokushijuusanmenmachi},
       .han = -2,
-      .fu = -1,  // -1 代表 OJ 不会测评该条目
+      .fu = 0,  // 0 代表 OJ 不会测评该条目
       .point = {32000, 32000, 32000},
-      .machi = -1,    // -1 代表 OJ 不会测评该条目
-      .shanten = -1,  // -1 代表 OJ 不会测评该条目
+      .machi = 0,    // 0 代表 OJ 不会测评该条目
+      .shanten = 0,  // 0 代表 OJ 不会测评该条目
   };
   Result example1 = {
       .type = RON,
@@ -17,8 +17,8 @@ Result *majsa(Status *status) {
       .han = 5,
       .fu = 40,
       .point = {8300, 0, 0},
-      .machi = -1,    // -1 代表 OJ 不会测评该条目
-      .shanten = -1,  // -1 代表 OJ 不会测评该条目
+      .machi = 0,    // 0 代表 OJ 不会测评该条目
+      .shanten = 0,  // 0 代表 OJ 不会测评该条目
   };
   Result example2 = {
       .type = RON,
@@ -26,25 +26,25 @@ Result *majsa(Status *status) {
       .han = 4,
       .fu = 40,
       .point = {0, 0, 8300},
-      .machi = -1,    // -1 代表 OJ 不会测评该条目
-      .shanten = -1,  // -1 代表 OJ 不会测评该条目
+      .machi = 0,    // 0 代表 OJ 不会测评该条目
+      .shanten = 0,  // 0 代表 OJ 不会测评该条目
   };
   Result example3 = {
       .type = TENPAI,
       .yaku = {},          // 全空代表 OJ 不会测评该条目
-      .han = -1,           // -1 代表 OJ 不会测评该条目
-      .fu = -1,            // -1 代表 OJ 不会测评该条目
+      .han = 0,           // 0 代表 OJ 不会测评该条目
+      .fu = 0,            // 0 代表 OJ 不会测评该条目
       .point = {0, 0, 0},  // 全为零代表 OJ 不会测评该条目
       .machi = 2,
-      .shanten = -1,  // -1 代表 OJ 不会测评该条目
+      .shanten = 0,  // 0 代表 OJ 不会测评该条目
   };
   Result example4 = {
       .type = NOTEN,
       .yaku = {},          // 全空代表 OJ 不会测评该条目
-      .han = -1,           // -1 代表 OJ 不会测评该条目
-      .fu = -1,            // -1 代表 OJ 不会测评该条目
+      .han = 0,           // 0 代表 OJ 不会测评该条目
+      .fu = 0,            // 0 代表 OJ 不会测评该条目
       .point = {0, 0, 0},  // 全为零代表 OJ 不会测评该条目
-      .machi = -1,         // -1 代表 OJ 不会测评该条目
+      .machi = 0,         // 0 代表 OJ 不会测评该条目
       .shanten = 4,
   };
 
