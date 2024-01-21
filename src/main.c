@@ -100,7 +100,8 @@ void outputResultJson(Result result) {
   FILE *f = fopen("result.json", "w");
   fprintf(f, "{\"Type\":%d,\"Yaku\":[", result.type);
   for (int i = 0; i < 20; i++) {
-    fprintf(f, "%d", result.yaku[i]);
+    if (result.yaku[i] != 0)
+      fprintf(f, "%d", result.yaku[i]);
     if (i < 19 && result.yaku[i + 1] != 0)
       fprintf(f, ",");
     else if (i < 19 && result.yaku[i + 1] == 0)
