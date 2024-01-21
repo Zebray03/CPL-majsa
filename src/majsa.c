@@ -13,7 +13,7 @@ Result *majsa(Status *status) {
   };
   Result example1 = {
       .type = RON,
-      .yaku = {Riichi, Ippatsu, Tanyao},
+      .yaku = {Tanyao, Riichi, Ippatsu},
       .han = 5,
       .fu = 40,
       .point = {8300, 0, 0},
