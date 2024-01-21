@@ -2,7 +2,7 @@
 #include "majsa.h"
 
 int main() {
-  const Status status = {
+  Status status = {
       .bakaze = TON,
       .jikaze = TON,
       .honbaCount = 0,
