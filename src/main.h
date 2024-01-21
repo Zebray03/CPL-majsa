@@ -1,10 +1,11 @@
 #pragma once
+#include <stdio.h>
 #include <stdbool.h>
 #include <assert.h>
 
 typedef enum {
   TON,   // 东风
-  NAN,   // 南风
+  NANN,   // 南风，由于 NAN 与 math.h 库冲突，改为 NANN
   SHAA,  // 西风
   PEI    // 北风
 } KazeType;
@@ -138,3 +139,5 @@ struct result {
 };
 
 typedef struct result Result;
+
+void outputResultJson(Result result);

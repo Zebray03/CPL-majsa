@@ -38,7 +38,7 @@
 struct status {
   KazeType bakaze;       // 场风
   KazeType jikaze;       // 自风
-  int honbaCount;        // 本场棒数
+  int honbaCount;        // 本场棒数，不考虑遗留立直棒数
   char dora[12];         // 宝牌指示牌
   char uradora[12];      // 里宝牌指示牌
   char handTile[30];     // 自家手牌
@@ -76,7 +76,7 @@ OJ 会在评测时给定不同的初始台面状态，运行你所编写的代�
 
 评分时针对结果状态为分段评分，即对结果状态中每一个变量独立判断，以此分段构成本项目的分数。
 
-至于程序具体如何去实现，可以参考上述流程图，也可以自行设计，总体目标就是完成定义在 `main.h` 中的 `Result *majsa(Status*)` 函数。
+至于程序具体如何去实现，可以参考上述流程图，也可以自行设计，总体目标就是完成定义在 `majsa.h` 中的 `Result *majsa(Status*)` 函数。
 
 框架代码中根据上述流程图提供了部分函数接口，可以以此为基础实现，也可以自行重构，同时也可以自行创建你想要的数据结构，**但与 `Status`、`Result`、`majsa()` 相关的任何定义（包括如 `KazeType`、`Yaku` 等的定义）均不建议改动，否则后果自负。**
 
@@ -154,7 +154,7 @@ int main(){
 
 ### 测试样例解释
 
-- 场风 `bakaze`与自风 `jikaze` 均为枚举类型，详见框架代码，注意到自风 `jikaze` 为 `TON` 时自家为庄家，其余自风时自家为客家，会影响点数计算。
+- 场风 `bakaze`与自风 `jikaze` 均为枚举类型，详见框架代码，注意到自风 `jikaze` 为 `TON` 时自家为庄家，其余自风时自家为客家，会影响点数计算。由于南风 `NAN` 与 `math.h` 中的 `NAN` 冲突，故将南风改为 `NANN`。
 - 本场棒数 `honbaCount` 为非负整数，若为 `1`，即为一本场，影响点数计算。
 - 宝牌指示牌 `dora`、里宝牌指示牌 `uradora`、手牌 `handTile`、副露区 `groupTile` 中的字符串、舍牌区的牌 `discardTile` 与当前控牌 `currentTile` 的字符串格式均为两个字符表示一张牌，对应关系如下：
 

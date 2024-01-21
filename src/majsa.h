@@ -3,6 +3,7 @@
 #include "Calculator.h"
 #include "AgariChecker.h"
 #include "YakuChecker.h"
+#include <string.h>
 #include <stdlib.h>
 
 Result *majsa(Status *status);  // 主函数
