@@ -38,7 +38,7 @@ int main() {
           .isRinshan = false,
       },
   };
-  Result const *result = majsa(&status[0]);
+  Result const *result = majsa(&status[0]); // 更改这里的参数来切换测试用例
   if (result != NULL)
     outputResultJson(*result);
   // OJ 会对比输出结果和标准结果，按照对比结果给出评分
