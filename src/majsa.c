@@ -45,7 +45,7 @@ Result *majsa(Status *status) {
       .fu = 0,            // 0 代表 OJ 不会测评该条目
       .point = {0, 0, 0},  // 全为零代表 OJ 不会测评该条目
       .machi = 0,         // 0 代表 OJ 不会测评该条目
-      .shanten = 4,
+      .shanten = 3,
   };
 
   if (status->bakaze == TON && status->jikaze == TON) {
