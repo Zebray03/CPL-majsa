@@ -111,8 +111,10 @@ OJ 会在评测时给定不同的初始台面状态，运行你所编写的代�
 
 ```txt
 .
-├── Makefile
-├── CMakeLists.txt
+├── Makefile             # Linux 下的自动编译脚本
+├── CMakeLists.txt       # CLion 可使用的 CMakeLists
+├── compile.sh           # Linux 编译命令脚本（与 OJ 上同款）
+├── compile.ps1          # Windows 下的 PowerShell 编译命令脚本
 ├── README.md
 ├── assets
 └── src
