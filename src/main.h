@@ -118,7 +118,7 @@ struct status {
   Group groupTile[30];   // 自家副露区（包括暗杠）
   char discardTile[60];  // 自家弃牌区（包含被别家副露掉的牌）
   Player currentPlayer;  // 当前控牌玩家
-  char currentTile[2];   // 当前控牌
+  char currentTile[3];   // 当前控牌
   int remainTileCount;   // 牌山剩余牌数
   bool isRiichi;         // 是否已立直
   bool isDoubleRiichi;   // 是否为两立直
