@@ -266,5 +266,102 @@
       "YakuhaiJikaze",
       "YakuhaiHaku"
     ]
+  },
+  {
+    "test": 42,
+    "Yaku": []
+  },
+  {
+    "test": 43,
+    "Yaku": [
+      "Daisangen",
+      "Tsuuiisou"
+    ]
+  },
+  {
+    "test": 44,
+    "Yaku": [
+      "Daisangen",
+      "Tsuuiisou",
+      "Suuankou"
+    ]
+  },
+  {
+    "test": 45,
+    "Yaku": [
+      "Kokushimusou"
+    ]
+  },
+  {
+    "test": 46,
+    "Yaku": [
+      "Chuurenkyuumenmachi"
+    ]
+  },
+  {
+    "test": 47,
+    "Yaku": [
+      "Chuurenkyuumenmachi"
+    ]
+  },
+  {
+    "test": 48,
+    "Yaku": []
+  },
+  {
+    "test": 49,
+    "Yaku": [
+      "Ryuuiisou",
+      "Suuankoutanki"
+    ]
+  },
+  {
+    "test": 50,
+    "Yaku": [
+      "Ryuuiisou"
+    ]
+  },
+  {
+    "test": 51,
+    "Yaku": [
+      "Ryuuiisou",
+      "Suuankou"
+    ]
+  },
+  {
+    "test": 52,
+    "Yaku": []
+  },
+  {
+    "test": 53,
+    "Yaku": [
+      "Ryuuiisou",
+      "Suuankou"
+    ]
+  },
+  {
+    "test": 54,
+    "Yaku": [
+      "Houteiraoyui",
+      "Riichi",
+      "Pinhu",
+      "Junchantaiyaochuu",
+      "Ryanpeikou",
+      "Chinitsu"
+    ]
+  },
+  {
+    "test": 55,
+    "Yaku": [
+      "Chinroutou",
+      "Suuankoutanki"
+    ]
+  },
+  {
+    "test": 56,
+    "Yaku": [
+      "Chinroutou",
+      "Suuankou"
+    ]
   }
 ]

@@ -3,7 +3,7 @@
 all: majsa
 
 majsa: git
-	gcc -g -O2 $(shell find ./src -name *.c) -I. -Wall -Wextra -o majsa
+	gcc -g -O2 $(shell find ./src -name *.c) -std=c17 -lm -I. -Wall -Wextra -o majsa
 
 run: majsa
 	./majsa
