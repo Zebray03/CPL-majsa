@@ -363,5 +363,20 @@
       "Chinroutou",
       "Suuankou"
     ]
+  },
+  {
+    "test": 57,
+    "Yaku": [
+      "Riichi",
+      "Ippatsu",
+      "Pinhu",
+      "Ikkitsuukan"
+    ]
+  },
+  {
+    "test": 58,
+    "Yaku": [
+      "IkkitsuukanF"
+    ]
   }
 ]
