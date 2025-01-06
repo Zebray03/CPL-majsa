@@ -106,6 +106,8 @@ typedef enum {
   Kokushijuusanmenmachi = 0xf11,  // 国士无双十三面
   Chuurenkyuumenmachi = 0xf12,    // 纯正九莲宝灯
   Daisuushi = 0xf00,              // 大四喜
+
+  Unknown=0xeee,  //终结符标记位
 } Yaku;
 
 struct status {
